@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 2000px;
+            animation-name: effect2;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+        }
+
+        .sun {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            margin-left: 50%;
+            border-radius: 50%;
+            background: linear-gradient(#ff0, #d00);
+            box-shadow: 0 0 40px 6px #f20, 0 0 150px 10px #f33;
+            animation-name: effect;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+        }
+
+        .text {
+            font-family: monospace;
+            font-size: 50px;
+            margin: 20px;
+            text-shadow: 3px 3px darkgray;
+        }
+
+        @keyframes effect {
+            0% {
+                top: 0px;
+                opacity: 100%;
+            }
+
+            100% {
+                top: 400px;
+                opacity: 0%;
+            }
+        }
+
+        @keyframes effect2 {
+            0% {
+                background-color: initial;
+
+            }
+
+            100% {
+                background-color: rgb(56, 38, 38);
+                opacity: 100%;
+            }
+        }
+
+        span::before {
+            content: "Sun Rise";
+            animation-name: animate;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes animate {
+
+            0% {
+                font-family: monospace;
+                content: "Sun Rise";
+            }
+
+            70% {
+                color: white;
+                content: "Sun Set";
+            }
+
+            100% {
+                color: white;
+                content: "Sun Set";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text"><span> </span></h1>
+        <div class="sun">
+
+        </div>
+    </div>
+</body>
+
+</html>
